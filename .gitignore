@@ -1,2 +1,4 @@
 *.swp
 *.o
+G*
+make_dependencies
