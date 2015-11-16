@@ -1,6 +1,7 @@
 #	$Id: Makefile,v 1.8 2008/07/10 16:44:14 dvermeir Exp $
 #
-CFLAGS=		-Wall -g
+CFLAGS=		-Wall -g -m32
+LDFLAGS= -melf_i386
 CC=		gcc
 #
 SOURCE=		microc.sh micro.y lex.l symbol.c symbol.h Makefile *.mi

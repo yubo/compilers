@@ -19,6 +19,6 @@ base=`basename $1 .mi`
 # compile to assembly code
 ./micro <$1 >${base}.s || { echo "Errors in compilation of $1"; exit 1; }
 # assemble to object file: the --gdwarf2 option generates info for gdb
-as --gdwarf2 ${base}.s -o ${base}.o  || { echo "Errors assembling $1.s"; exit 1; }
+as --32 --gdwarf2 ${base}.s -o ${base}.o  || { echo "Errors assembling $1.s"; exit 1; }
 # link
-ld ${base}.o -o ${base} || { echo "Errors linking $1.o"; exit 1; }
+ld -m elf_i386 ${base}.o -o ${base} || { echo "Errors linking $1.o"; exit 1; }

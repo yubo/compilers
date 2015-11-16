@@ -26,7 +26,7 @@ yyerror(char *s) {
 _start:\n\
 	call main \n\
 	jmp exit\n\
-.include \"../x86asm/print_int.s\"\n\
+.include \"./x86asm/print_int.s\"\n\
 .globl main\n\
 .type main, @function\n\
 main:\n\
